@@ -1,0 +1,2 @@
+ndk-stack -sym ./obj/local/armeabi -dump bug2.txt
+
