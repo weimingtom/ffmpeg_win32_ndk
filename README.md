@@ -5,7 +5,7 @@ ffmpeg win32 ndk build tool and test projects
 
 
 
-(1) Build Tools
+(1) Build Tools  
 * Windows XP  
 * ossbuild msys (MinGW)  
 	https://code.google.com/p/ossbuild/  
@@ -46,8 +46,9 @@ ffmpeg win32 ndk build tool and test projects
 * https://github.com/weikunlu/VideoProject  
 
 (7) Problems:  
-* I use SYSROOT_INC in Android.mk to pass compiling libavutil/parseutils.c (because of the file time.h in the same directory)
+* I use SYSROOT_INC in Android.mk to pass compiling libavutil/parseutils.c (because of the file time.h in the same directory)  
 * No asm and optimization, ONLY FOR ffmpeg study on Android  
+* **You can use msys_v11 (see folder msys_v11/) to configure ffmpeg under Windows XP (please unpack it with 7zip first). Msys_v11 is downloaded from google code.**   
 
 (8) LICENSE:  
-* see ffmpeg source (ffmpeg\1.2.4\ffmpeg-1.2.4.tar.gz)
+* see ffmpeg source (ffmpeg\1.2.4\ffmpeg-1.2.4.tar.gz)  
