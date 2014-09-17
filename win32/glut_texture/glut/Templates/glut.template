@@ -1,0 +1,22 @@
+[Template]
+ver=1
+Name=glut
+Icon=
+Description=A basic GLUT program
+Catagory=MultiMedia
+
+[Unit0]
+CName=main.c
+CppName=main.cpp
+C=glut.txt
+Cpp=glut.txt
+
+[Project]
+UnitCount=1
+Type=0
+Linker=-lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32
+Compiler=-DGLUT_STATIC
+CppCompiler=
+
+Name=GLUT Demo
+

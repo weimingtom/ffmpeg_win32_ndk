@@ -1,0 +1,40 @@
+CC = gcc
+# use pkg-config for getting CFLAGS and LDLIBS
+FFMPEG_LIBS=    libavdevice                        \
+                libavformat                        \
+                libavfilter                        \
+                libavcodec                         \
+                libswresample                      \
+                libswscale                         \
+                libavutil                          \
+
+CFLAGS += -Wall -O2 -g
+CFLAGS := $(shell PKG_CONFIG_PATH=/local/lib/pkgconfig pkg-config --cflags $(FFMPEG_LIBS)) $(CFLAGS)
+LDLIBS := $(shell PKG_CONFIG_PATH=/local/lib/pkgconfig pkg-config --libs $(FFMPEG_LIBS)) $(LDLIBS)
+
+EXAMPLES=       decoding_encoding                  \
+                demuxing                           \
+                filtering_video                    \
+                filtering_audio                    \
+                metadata                           \
+                muxing                             \
+                resampling_audio                   \
+                scaling_video                      \
+                demuxing2                          \
+                ruby_ffmpeg_test                   \
+
+OBJS=$(addsuffix .o,$(EXAMPLES))
+
+# the following examples make explicit use of the math library
+decoding_encoding: LDLIBS += -lm
+muxing:            LDLIBS += -lm
+
+.phony: all clean-test clean
+
+all: $(OBJS) $(EXAMPLES)
+
+clean-test:
+	$(RM) test*.pgm test.h264 test.mp2 test.sw test.mpg
+
+clean: clean-test
+	$(RM) $(EXAMPLES) $(OBJS)

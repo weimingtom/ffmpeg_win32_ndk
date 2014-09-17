@@ -1,0 +1,16 @@
+SDL_LockYUVOverlay
+SDL_UnlockYUVOverlay
+SDL_CreateYUVOverlay
+SDL_DisplayYUVOverlay
+SDL_CreateYUVOverlay
+
+SDL_CreateRGBSurface
+SDL_LockSurface
+SDL_UnlockSurface
+SDL_CreateRGBSurfaceFrom
+
+SDL_SaveBMP
+
+SDL_YV12_OVERLAY
+SDL_Rect
+SDL_Surface

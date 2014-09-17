@@ -1,0 +1,4 @@
+# gdb --command=gdbinit.txt --quiet ./main.exe  
+
+#set args ../inlove_mpeg.mpg
+run ../inlove_mpeg.mpg

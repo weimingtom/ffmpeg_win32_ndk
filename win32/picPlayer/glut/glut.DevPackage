@@ -1,0 +1,17 @@
+[Setup]
+Version=1
+AppName=glut
+MenuName=glut
+AppVersion=7.6
+AppVerName=GLUT - the OpenGL Utility Toolkit
+Description=A window system independent toolkit for writing OpenGL programs
+Url=http://www.mesa3d.org/
+
+[Files]
+include=<app>\include\
+lib=<app>\lib\
+Templates=<app>\Templates\
+
+[Icons]
+Mesa3D=http://www.mesa3d.org/
+API Specifications=http://www.opengl.org/documentation/spec.html

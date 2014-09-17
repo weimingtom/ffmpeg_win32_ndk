@@ -1,0 +1,23 @@
+(x)SDL_CondSingnal
+SDL_CondWait (generic/syscond)
+SDL_CreateCond (generic/syscond)
+SDL_CreateMutex (win32/sysmutex)
+SDL_CreateThread (sdl_thread)
+SDL_mutexP (win32/sysmutex)
+SDL_mutexV (win32/sysmutex)
+
+SDL_WaitEvent
+SDL_Delay
+
+SDL_GetError
+SDL_Init
+SDL_Quit
+
+SDL_OpenAudio
+SDL_PauseAudio
+
+SDL_strlcat
+SDL_strlcpy
+
+(x)SDL_SetModuleHandle
+(x)SDL_getenv

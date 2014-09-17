@@ -1,0 +1,73 @@
+gcc -g -O2   -I./include -I./ffmpeg/include -I./sdl/include -I./glut/include -DPTW32_STATIC_LIB -o main.o -c main.c
+main.c: In function 'queue_picture':
+main.c:228: warning: passing argument 1 of 'pthread_mutex_lock' from incompatible pointer type
+d:/android_rtmp/ffmpeg/msys/mingw/lib/gcc/../../i686-pc-mingw32/include/pthread.h:1014: note: expected 'struct pthread_mutex_t_ **' but argument is of type 'struct SDL_mutex *'
+main.c:240: warning: passing argument 1 of 'pthread_cond_timedwait' from incompatible pointer type
+d:/android_rtmp/ffmpeg/msys/mingw/lib/gcc/../../i686-pc-mingw32/include/pthread.h:1071: note: expected 'struct pthread_cond_t_ **' but argument is of type 'struct SDL_cond *'
+main.c:240: warning: passing argument 2 of 'pthread_cond_timedwait' from incompatible pointer type
+d:/android_rtmp/ffmpeg/msys/mingw/lib/gcc/../../i686-pc-mingw32/include/pthread.h:1071: note: expected 'struct pthread_mutex_t_ **' but argument is of type 'struct SDL_mutex *'
+main.c:260: warning: passing argument 1 of 'pthread_mutex_unlock' from incompatible pointer type
+d:/android_rtmp/ffmpeg/msys/mingw/lib/gcc/../../i686-pc-mingw32/include/pthread.h:1021: note: expected 'struct pthread_mutex_t_ **' but argument is of type 'struct SDL_mutex *'
+gcc -g -O2   -I./include -I./ffmpeg/include -I./sdl/include -I./glut/include -DPTW32_STATIC_LIB -o main.exe main.o -L./ffmpeg/lib -lavdevice -lavfilter -lpostproc -lavformat -lavcodec -lavicap32 -lws2_32 -lmingw32 -lbz2 -lz -lpsapi -ladvapi32 -lshell32 -lwinmm -lgdi32 -lswresample -lswscale -lavutil -lm -lpthreadGC2 -lws2_32
+main.o: In function `schedule_refresh':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:596: undefined reference to `SDL_AddTimer'
+main.o: In function `sdl_refresh_timer_cb':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:589: undefined reference to `SDL_PushEvent'
+main.o: In function `video_display':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:632: undefined reference to `SDL_DisplayYUVOverlay'
+main.o: In function `video_refresh_timer':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:678: undefined reference to `SDL_mutexP'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:680: undefined reference to `SDL_CondSignal'
+main.o: In function `alloc_picture':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:563: undefined reference to `SDL_FreeYUVOverlay'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:571: undefined reference to `SDL_CreateYUVOverlay'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:579: undefined reference to `SDL_mutexP'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:581: undefined reference to `SDL_CondSignal'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:568: undefined reference to `SDL_SetVideoMode'
+main.o: In function `SDL_main':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:718: undefined reference to `SDL_Init'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:727: undefined reference to `SDL_SetVideoMode'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:735: undefined reference to `SDL_CreateMutex'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:736: undefined reference to `SDL_CreateCond'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:767: undefined reference to `SDL_WaitEvent'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:802: undefined reference to `SDL_Quit'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:719: undefined reference to `SDL_GetError'
+main.o: In function `queue_picture':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:278: undefined reference to `SDL_LockYUVOverlay'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:301: undefined reference to `SDL_UnlockYUVOverlay'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:304: undefined reference to `SDL_mutexP'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:306: undefined reference to `SDL_mutexV'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:269: undefined reference to `SDL_PushEvent'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:270: undefined reference to `SDL_mutexP'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:272: undefined reference to `SDL_CondWait'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:274: undefined reference to `SDL_mutexV'
+main.o: In function `stream_component_open':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:436: undefined reference to `SDL_CreateThread'
+main.o: In function `decode_thread':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:521: undefined reference to `SDL_Delay'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:551: undefined reference to `SDL_PushEvent'
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:544: undefined reference to `SDL_Delay'
+main.o: In function `video_refresh_timer':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:681: undefined reference to `SDL_mutexV'
+main.o: In function `alloc_picture':
+D:\android_rtmp\ffmpeg\msys\home\Administrator\picPlayer/main.c:582: undefined reference to `SDL_mutexV'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x2c): undefined reference to `SDL_FreeYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x3f): undefined reference to `SDL_Quit'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0xdf): undefined reference to `SDL_MapRGB'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0xf5): undefined reference to `SDL_FillRect'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x100): undefined reference to `SDL_LockYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x147): undefined reference to `SDL_DisplayYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x152): undefined reference to `SDL_UnlockYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x181): undefined reference to `SDL_UpdateRect'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x1ca): undefined reference to `SDL_WasInit'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x1de): undefined reference to `SDL_Init'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x326): undefined reference to `SDL_WM_SetCaption'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x348): undefined reference to `SDL_SetVideoMode'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x373): undefined reference to `SDL_CreateYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x5ed): undefined reference to `SDL_FreeYUVOverlay'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x609): undefined reference to `SDL_Quit'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x713): undefined reference to `SDL_GetError'
+./ffmpeg/lib/libavdevice.a(sdl.o):sdl.c:(.text+0x762): undefined reference to `SDL_GetError'
+d:/android_rtmp/ffmpeg/msys/mingw/bin/../lib/gcc/i686-pc-mingw32/4.4.3/../../../../i686-pc-mingw32/lib/libmingw32.a(main.o):main.c:(.text+0xd2): undefined reference to `WinMain@16'
+collect2: ld returned 1 exit status
+make: *** [main.exe] Error 1

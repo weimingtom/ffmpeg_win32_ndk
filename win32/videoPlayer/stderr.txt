@@ -1,0 +1,15 @@
+[mpeg1video @ 025e03c0] sequence header damaged
+[mpeg @ 019ca2e8] max_analyze_duration 5000000 reached at 5015467 microseconds
+Input #0, mpeg, from '../inlove_mpeg.mpg':
+  Duration: 00:00:58.68, start: 0.144756, bitrate: 1355 kb/s
+    Stream #0:0[0x1e0]: Video: mpeg1video, yuv420p, 352x240 [SAR 200:219 DAR 880:657], 1120 kb/s, 29.97 fps, 29.97 tbr, 90k tbn, 29.97 tbc
+    Stream #0:1[0x1c0]: Audio: mp2, 44100 Hz, stereo, s16p, 224 kb/s
+663: wanted_spec.format = 32784
+664: wanted_spec.samples = 11028
+665: wanted_spec.channels = 2
+666: wanted_spec.freq = 44100
+668: spec.format = 32784
+669: spec.samples = 11028
+670: spec.channels = 2
+671: spec.freq = 44100
+[mpeg1video @ 025e03c0] sequence header damaged

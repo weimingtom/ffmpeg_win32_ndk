@@ -1,0 +1,9 @@
+PKG_CONFIG_PATH=/local/lib/pkgconfig pkg-config --cflags libavdevice libavformat libavfilter libavcodec libswresample libswscale libavutil
+
+-I./ffmpeg/include
+
+PKG_CONFIG_PATH=/local/lib/pkgconfig pkg-config --libs libavdevice libavformat libavfilter libavcodec libswresample libswscale libavutil
+
+-L./ffmpeg/lib -lavdevice -lavfilter -
+lpostproc -lavformat -lavcodec -lavicap32 -lws2_32 -lmingw32 -lSDLmain -lSDL -lb
+z2 -lz -lpsapi -ladvapi32 -lshell32 -lswresample -lswscale -lavutil -lm
